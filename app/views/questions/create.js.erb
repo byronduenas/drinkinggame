@@ -1,0 +1,5 @@
+$('.row').remove();
+$("<%= escape_javascript(render 'application/index') %>").appendTo(".container");
+$(".create_question").bind('ajax:success', function() {
+    console.log('ajax:success!')
+});
