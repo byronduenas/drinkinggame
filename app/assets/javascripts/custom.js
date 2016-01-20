@@ -1,4 +1,5 @@
-var dispatcher = new WebSocketRails('associatedwithit.herokuapp.com/websocket');
+var uri = window.document.location.host + "/websocket";
+var dispatcher = new WebSocketRails(uri);
 
 dispatcher.bind('refresh', function(data) {
     $('.row').remove();
