@@ -1,2 +1,0 @@
-class AssociatedWithItsController < ApplicationController
-end

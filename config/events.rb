@@ -7,8 +7,9 @@ WebsocketRails::EventMap.describe do
   #   subscribe :client_connected, :to => Controller, :with_method => :method_name
   #
   # Here is an example of mapping namespaced events:
-  #   namespace :product do
-  #     subscribe :new, :to => ProductController, :with_method => :new_product
-  #   end
+    namespace :games do
+      subscribe :create_question, :to => GamesController, :with_method => :create_question
+      subscribe :create_associated_with_it, :to => GamesController, :with_method => :create_associated_with_it
+    end
   # The above will handle an event triggered on the client like `product.new`.
 end

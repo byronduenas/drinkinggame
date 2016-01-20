@@ -2,10 +2,10 @@
   <div class="col-lg-12 col-md-12 col-sm-12">
     <h1>Associated With It</h1>
 
-    <h3>Questions: <%= Question.count %></h3>
-    <%= link_to 'Another One', associated_with_its_path, method: :post, remote: true, class: 'btn btn-success create_question' %>
-    <h3>Associated With It: <%= AssociatedWithIt.count %></h3>
-    <%= link_to 'Another One', questions_path, method: :post, remote: true, class: 'btn btn-success' %>
+    <h3>Questions: <%= Game.where(kind: 'Question').count %></h3>
+    <%= link_to 'Another One', '#', class: 'btn btn-success create_question' %>
+    <h3>Associated With It: <%= Game.where(kind: 'AssociatedWithIt').count %></h3>
+    <%= link_to 'Another One', '#', class: 'btn btn-success create_associated_with_it' %>
   </div>
 </div>
 
